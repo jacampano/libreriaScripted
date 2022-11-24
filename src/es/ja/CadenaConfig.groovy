@@ -7,7 +7,7 @@ class CadenaConfig {
     Map configuracionCadena = [:]
     Map configuracionPipeline = [
         java: "",
-        tipoProduto: "maven",
+        tipoProducto: "maven",
         versionMaven: "",
         rutaPOM:"",
         goals:""
@@ -21,7 +21,7 @@ class CadenaConfig {
             analizarConOWASP: true,
             realizarCompilacion: true,
             realizarPruebasUnitarias: true,
-            realizarPruebasFuncionales: true,
+            realizarPruebasFuncionales: true
         ]
     def steps = null
 
