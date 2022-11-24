@@ -14,7 +14,7 @@ static void execute(ct) {
 
                ct.echo("--- EJECUCION WEBHOOK ---")
                url = ct.env.gitlabSourceRepoHttpUrl
-               rama = steps.env.gitlabBranch
+               rama = ct.env.gitlabBranch
                ct.echo("--- Obtener Codigo Fuente desde rama:${rama}--")
                ct.checkout([$class: 'GitSCM',
                          branches: [[name: rama]],
