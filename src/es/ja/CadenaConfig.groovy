@@ -6,9 +6,9 @@ class CadenaConfig {
 
     Map configuracionCadena = [:]
     Map configuracionPipeline = [
-        java: "",
+        java: "JDK11",
         tipoProducto: "maven",
-        versionMaven: "",
+        versionMaven: "Maven-3.8.6",
         rutaPOM:"./pom.xml",
         goals:"clean package",
         credencialesGIT:"Gitlab"
