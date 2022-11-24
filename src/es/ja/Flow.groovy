@@ -48,18 +48,9 @@ class Flow {
         //stages.desplegarArtifactory()
       
         stages.pruebasDeComponentes()
-        stages.pruebasFuncionales()
         stages.vistoBuenoCalidad()
         stages.finalizacion()
     
     }
-
-    private void redespliegueFlow() {
-        stages.obtenerConfiguracionServidor()
-        stages.obtenerCodigoFuente()
-        stages.obtenerInformacionProducto()
-        stages.redesplieguePreProduccion()
-        stages.redespliegueProduccion()
-    }
-
+   
 }
