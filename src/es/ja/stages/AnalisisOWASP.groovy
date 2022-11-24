@@ -13,7 +13,7 @@ static void execute(ct) {
 
       
         ct.catchError (buildResult: 'SUCCESS', stageResult: 'UNSTABLE') {
-            ct.dependencyCheck additionalArguments: arguments, odcInstallation: 'DC-5.2.4'
+            ct.dependencyCheck additionalArguments: arguments, odcInstallation: cadenaConfig.configuracionPipeline.dependencyCheckTool
          }
         
         if (ct.fileExists(filename)) {
@@ -24,7 +24,7 @@ static void execute(ct) {
             
         }
     
-        ct.EnvioCorreo(Constants.FASE_DEPENDENCY_CHECK) // TODO
+        //ct.EnvioCorreo(Constants.FASE_DEPENDENCY_CHECK) 
     
     }
 }

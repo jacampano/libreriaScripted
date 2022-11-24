@@ -14,7 +14,8 @@ class CadenaConfig {
         credencialesGIT: "Gitlab",
         sonarScanerTool: "SonarScanner",
         sonarToken: "SonarToken",
-        sonarInstancia:"SonarLocal"
+        sonarInstancia:"SonarLocal",
+        dependencyCheckTool:"DC-7.3.0"
     ]
     Map configuracionGit = [:]
     Map runningConfig = [
