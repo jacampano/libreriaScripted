@@ -20,6 +20,7 @@ static void execute(ct) {
           }
 
           ct.echo("--- Tipologia de producto: ${productType}")
+          ct.echo("--- Tipologia de producto: ${cadenaConfig.configuracionPipeline}")
           ct.echo("--- Tipo acción ${tipoAccion}")
           
 
