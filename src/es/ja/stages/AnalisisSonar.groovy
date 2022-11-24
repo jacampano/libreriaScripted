@@ -8,7 +8,7 @@ static void execute(ct) {
     ct.stageWhen('Analisis estatico de código', cadenaConfig.runningConfig.analizarConSonar) {
         ct.withEnv(['SONAR_SCANNER_OPTS=-Xms512m -Xmx1024m',
         "JAVA_HOME=${ ct.tool cadenaConfig.configuracionPipeline.java}"]) {
-            def scannerHome = ct.tool(cadenaConfig.configuracionPipeline.sonarScaner)
+            def scannerHome = ct.tool(cadenaConfig.configuracionPipeline.sonarScanerTool)
 
             ct.catchError (buildResult: 'SUCCESS', stageResult: 'UNSTABLE') {
                 ct.withSonarQubeEnv(credentialsId: cadenaConfig.configuracionPipeline.sonarToken, installationName: cadenaConfig.configuracionPipeline.sonarInstancia) {
