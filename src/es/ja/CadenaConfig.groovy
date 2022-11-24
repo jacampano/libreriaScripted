@@ -10,7 +10,7 @@ class CadenaConfig {
         tipoProducto: "maven",
         versionMaven: "",
         rutaPOM:"./pom.xml",
-        goals:"",
+        goals:"clean package",
         credencialesGIT:"Gitlab"
     ]
     Map configuracionGit = [:]
