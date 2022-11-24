@@ -9,7 +9,7 @@ static void execute(ct) {
             //ct.sleep(10)
             ct.timeout(time: 1, unit: 'MINUTES') {
                 def qg = ""
-                ct.withSonarQubeEnv(credentialsId: 'Sonar7Token', installationName: 'Sonar') {
+                ct.withSonarQubeEnv(credentialsId: cadenaConfig.configuracionPipeline.sonarToken, installationName: cadenaConfig.configuracionPipeline.sonarInstancia) {
                  qg = ct.waitForQualityGate()
                 }
                 if (qg.status != 'OK') {
