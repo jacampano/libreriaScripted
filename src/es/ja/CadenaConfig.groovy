@@ -4,7 +4,9 @@ class CadenaConfig {
 
     private static final CadenaConfig INSTANCE = new CadenaConfig()
 
-    Map configuracionCadena = [:]
+    Map configuracionCadena = [
+        credencialesGIT="Gitlab"
+    ]
     Map configuracionPipeline = [
         java: "",
         tipoProducto: "maven",

@@ -13,16 +13,16 @@ static void execute(ct) {
           ct.timeout(time: 5, unit: 'MINUTES') {
 
                ct.echo("--- EJECUCION WEBHOOK ---")
-               url = cadenaConfig.configuracionGit.url
-               rama = cadenaConfig.configuracionGit.rama
+               url = ct.env.gitlabSourceRepoHttpUrl
+               rama = steps.env.gitlabBranch
                ct.echo("--- Obtener Codigo Fuente desde rama:${rama}--")
-               /*ct.checkout([$class: 'GitSCM',
+               *ct.checkout([$class: 'GitSCM',
                          branches: [[name: rama]],
                          doGenerateSubmoduleConfigurations: false,
                          extensions: [], gitTool: 'git', submoduleCfg: [],
-                         userRemoteConfigs: [[credentialsId: credentialsId, url: url]]])*/
+                         userRemoteConfigs: [[credentialsId: credentialsId, url: url]]])
                def workspace = "${ct.env.WORKSPACE}"
-               ct.DescargarRepositorio(rama,url,credentialsId,workspace,ct)
+               //ct.DescargarRepositorio(rama,url,credentialsId,workspace,ct)
           }
      }
 }
