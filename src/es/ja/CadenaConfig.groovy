@@ -1,7 +1,5 @@
 package es.ja
 
-import es.ja.Despliegues
-
 class CadenaConfig {
 
     private static final CadenaConfig INSTANCE = new CadenaConfig()
