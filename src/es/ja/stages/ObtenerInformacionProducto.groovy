@@ -12,24 +12,11 @@ static String execute(ct) {
         switch(cadenaConfig.configuracionPipeline.tipoProducto.toLowerCase()) {
 
             case ~/^maven.*/ : 
-                def mavenPom = ct.readMavenPom(file: cadenaConfig.configuracionPipeline.java.rutaPOM)
+                def mavenPom = ct.readMavenPom(file: cadenaConfig.configuracionPipeline.rutaPOM)
                 runningConfig.groupId = mavenPom.getGroupId()
                 runningConfig.artifactId = mavenPom.getArtifactId()
-                def comandoMavenVersion = "mvn help:evaluate -Dexpression=project.version -q -DforceStdout -f ${cadenaConfig.configuracionPipeline.java.rutaPOM} -U"
-                //runningConfig.version = mavenPom.getVersion()
-                //getVersion() no evalua el pom antes de realizar la lectura. Si el pom tiene como version una variable definida como propiedad
-                // no se tomará el valor correctamente. Por eso, se cambia la forma en la que se obtiene. El problema, es que la salida que se produce
-                // no solo es la versión, sino como se ejecuta dentro del wrapper de maven, da información de contexto, por eso el procesado a toda la cadena. Lo último es la versión
-                
-                ct.withMaven(maven: cadenaConfig.configuracionPipeline.java.versionMaven, jdk: cadenaConfig.configuracionPipeline.java.versionJDK) {
-                                
-                    runningConfig.version=ct.sh(script: comandoMavenVersion ,returnStdout: true)
-                    def numLineas = runningConfig.version.readLines().size()
-                    runningConfig.version=runningConfig.version.trim().readLines().drop(numLineas-1).toString()
-                }
-            
-                runningConfig.version=runningConfig.version.substring(0,runningConfig.version.length() -1)
-                runningConfig.version=runningConfig.version.substring(1,runningConfig.version.length())
+                runningConfig.version = mavenPom.getVersion()
+    
                 ct.echo("--- VERSION: ${runningConfig.version}")
                 runningConfig.type = mavenPom.getPackaging()
 
