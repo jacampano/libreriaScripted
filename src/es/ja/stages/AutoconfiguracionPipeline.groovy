@@ -47,6 +47,8 @@ static void execute(ct) {
           switch (productType.toLowerCase()) {
                case 'maven':
                     ct.echo('--- PRODUCTO MAVEN ---')
+                    runningConfig.analizarConSonar = true
+                    runningConfig.analizarConOWASP = true
      
                break
 
