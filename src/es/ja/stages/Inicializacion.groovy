@@ -5,7 +5,7 @@ import es.ja.Utils
 import es.ja.Constants
 import es.ja.CadenaConfig
 
-static boolean execute(steps) {
+static void execute(steps) {
      def cadenaConfig = CadenaConfig.getInstance()
      cadenaConfig.initialize(steps)
      def configuracionGit = cadenaConfig.configuracionGit
@@ -31,7 +31,7 @@ static boolean execute(steps) {
              
           }
 
-          return isStartedByUser 
+          //return isStartedByUser 
 
      }
 }
