@@ -7,7 +7,7 @@ class CadenaConfig {
     Map configuracionCadena = [:]
     Map configuracionPipeline = [
         java: "",
-        tipoProduto: "",
+        tipoProduto: "maven",
         versionMaven: "",
         rutaPOM:"",
         goals:"",

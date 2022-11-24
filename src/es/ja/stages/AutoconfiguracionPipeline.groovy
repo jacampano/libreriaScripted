@@ -9,7 +9,6 @@ static void execute(ct) {
           def configuracionGit = cadenaConfig.configuracionGit
           def runningConfig = cadenaConfig.runningConfig
           def productType = cadenaConfig.configuracionPipeline.tipoProducto
-          def desplegarEn = cadenaConfig.configuracionPipeline.desplegarEn
           def tipoAccion =  ''
           def listaFWK = cadenaConfig.configuracionPipeline.frameworkPruebasAutomatizadas
           def isStartedByUser = ct.currentBuild.rawBuild.getCause(hudson.model.Cause$UserIdCause) != null
@@ -17,7 +16,7 @@ static void execute(ct) {
           if(isStartedByUser) {
                tipoAccion = "Ejecución manual"
           } else {
-               tipoAccion = cadenaConfig.configuracionGit.tipoAccion
+               tipoAccion = ct.env.gitlabActionType
           }
 
           ct.echo("--- Tipologia de producto: ${productType}")
@@ -48,7 +47,6 @@ static void execute(ct) {
           switch (productType.toLowerCase()) {
                case 'maven':
                     ct.echo('--- PRODUCTO MAVEN ---')
-                    runningConfig.buildImage = desplegarEn.any { item -> item in Constants.PLATAFORMAS_CONTENEDORES }
      
                break
 
