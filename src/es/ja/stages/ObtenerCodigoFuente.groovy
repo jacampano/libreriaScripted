@@ -16,7 +16,7 @@ static void execute(ct) {
                url = ct.env.gitlabSourceRepoHttpUrl
                rama = steps.env.gitlabBranch
                ct.echo("--- Obtener Codigo Fuente desde rama:${rama}--")
-               *ct.checkout([$class: 'GitSCM',
+               ct.checkout([$class: 'GitSCM',
                          branches: [[name: rama]],
                          doGenerateSubmoduleConfigurations: false,
                          extensions: [], gitTool: 'git', submoduleCfg: [],
