@@ -3,9 +3,6 @@ package es.ja
 import groovy.json.JsonSlurperClassic
 import groovy.json.JsonSlurper
 import jenkins.model.Jenkins
-import com.michelin.cio.hudson.plugins.rolestrategy.RoleBasedAuthorizationStrategy
-import com.michelin.cio.hudson.plugins.rolestrategy.Role
-import com.synopsys.arc.jenkins.plugins.rolestrategy.RoleType
 
 @NonCPS
 static Object jsonParse(String json) {
