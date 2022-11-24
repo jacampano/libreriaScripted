@@ -43,85 +43,14 @@ class Flow {
         stages.autoconfiguracionPipeline()
         stages.obtenerCodigoFuente()
         stages.obtenerInformacionProducto()
-        def configuracionEntornos = this.cadenaConfig.configuracionEntornos
         
-
-        
-        //stages.compilacionEmpaquetado()
-        stages.desplegarArtifactory()
-        
-        stages.construirImagen()
-        
-        if(configuracionEntornos != null) {
-       
-            if (configuracionEntornos.keySet().contains(Constants.ENTORNO_CI)) {
-                steps.echo("--- Proyecto tiene configurado entorno de CI---")
-                stages.desplegarEnEntorno(Constants.ENTORNO_CI)
-            } else {
-                steps.echo("--- Proyecto no configurado con entorno de CI. Se omite despliegue para este entorno ---")
-            }
-        
-        }
+        stages.compilacionEmpaquetado()
+        //stages.desplegarArtifactory()
+      
         stages.pruebasDeComponentes()
-
-       
-
-        if(configuracionEntornos != null) {
-
-       
-            if (configuracionEntornos.keySet().contains(Constants.ENTORNO_TEST)) {
-                steps.echo("--- Proyecto tiene configurado entorno de TEST---")
-                stages.desplegarEnEntorno(Constants.ENTORNO_TEST)
-            } else {
-                steps.echo("--- Proyecto no configurado con entorno de TEST. Se omite despliegue para este entorno ---")
-            }
-
-
-            if (configuracionEntornos.keySet().contains(Constants.ENTORNO_FORMACION)) {
-                steps.echo("--- Proyecto tiene configurado entorno de FORMACION---")
-                stages.desplegarEnEntorno(Constants.ENTORNO_FORMACION)
-            } else {
-                steps.echo("--- Proyecto no configurado con entorno de FORMACION. Se omite despliegue para este entorno ---")
-            }
-
-        }
-
         stages.pruebasFuncionales()
-        //stages.generacionSite()
-
-        
-
-        
         stages.vistoBuenoCalidad()
-        
-        if(configuracionEntornos != null) {
-            if(configuracionEntornos.keySet().contains(Constants.ENTORNO_PREPRODUCCION) && this.cadenaConfig.runningConfig.esEntrega) {
-
-                steps.echo("--- Proyecto tiene configurado entorno de PREPRODUCCION---")
-                stages.desplegarEnEntorno(Constants.ENTORNO_PREPRODUCCION)
-                    
-                } else {
-                    steps.echo("--- Proyecto no configurado con entorno de PRODUCCION o no se trata de una entrega. Se omite despliegue para este entorno ---")
-                }
-
-         }
-
-        stages.pruebasAceptacion()
-        if(configuracionEntornos != null) {
-        
-            if(configuracionEntornos.keySet().contains(Constants.ENTORNO_PRODUCCION) && this.cadenaConfig.runningConfig.esEntrega) {
-
-                steps.echo("--- Proyecto tiene configurado entorno de PRODUCCION---")
-                stages.desplegarEnEntorno(Constants.ENTORNO_PRODUCCION)
-                    
-                } else {
-                    steps.echo("--- Proyecto no configurado con entorno de PRODUCCION o no se trata de una entrega. Se omite despliegue para este entorno ---")
-                }
-        }
-    
-        stages.pruebasHumo()
         stages.finalizacion()
-
     
     }
 
