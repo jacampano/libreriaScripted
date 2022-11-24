@@ -48,7 +48,7 @@ static void execute(ct) {
                case 'maven':
                     ct.echo('--- PRODUCTO MAVEN ---')
                     runningConfig.analizarConSonar = true
-                    runningConfig.analizarConOWASP = true
+                    runningConfig.analizarConOWASP = false
      
                break
 
