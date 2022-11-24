@@ -11,10 +11,10 @@ class CadenaConfig {
         versionMaven: "Maven-3.8.6",
         rutaPOM:"./pom.xml",
         goals:"clean package",
-        credencialesGIT:"Gitlab",
-        sonarScanerTool="SonarScanner",
-        sonarToken="SonarToken",
-        sonarInstancia="SonarLocal"
+        credencialesGIT: "Gitlab",
+        sonarScanerTool: "SonarScanner",
+        sonarToken: "SonarToken",
+        sonarInstancia:"SonarLocal"
     ]
     Map configuracionGit = [:]
     Map runningConfig = [
