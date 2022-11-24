@@ -19,7 +19,8 @@ class Flow {
     public void flow() {
         try {
             // Stages
-            def (isStartedByUser) = stages.inicializacion()
+            def isStartedByUser =  stages.inicializacion()
+
             if (isStartedByUser) {
                 steps.currentBuild.result = 'ABORTED'
                 steps.error('[Error] Ejecucion manual iniciada desde jenkins. No se permite.')
