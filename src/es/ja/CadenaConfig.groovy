@@ -9,7 +9,7 @@ class CadenaConfig {
         java: "",
         tipoProducto: "maven",
         versionMaven: "",
-        rutaPOM:"",
+        rutaPOM:"./pom.xml",
         goals:"",
         credencialesGIT:"Gitlab"
     ]
