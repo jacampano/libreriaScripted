@@ -12,6 +12,9 @@ class CadenaConfig {
         rutaPOM:"./pom.xml",
         goals:"clean package",
         credencialesGIT:"Gitlab"
+        sonarScaner="SonarScanner",
+        sonarToken="SonarToken",
+        sonarInstancia="SonarLocal"
     ]
     Map configuracionGit = [:]
     Map runningConfig = [
