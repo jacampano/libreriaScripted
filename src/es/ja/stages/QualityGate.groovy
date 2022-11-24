@@ -6,7 +6,7 @@ static void execute(ct) {
     def cadenaConfig = CadenaConfig.getInstance()
     ct.stageWhen('Umbral de Calidad', cadenaConfig.runningConfig.analizarConSonar) {
         ct.catchError (buildResult: 'SUCCESS', stageResult: 'UNSTABLE') {
-            //ct.sleep(10)
+            ct.sleep(10)
             ct.timeout(time: 1, unit: 'MINUTES') {
                 def qg = ""
                 ct.withSonarQubeEnv(credentialsId: cadenaConfig.configuracionPipeline.sonarToken, installationName: cadenaConfig.configuracionPipeline.sonarInstancia) {
