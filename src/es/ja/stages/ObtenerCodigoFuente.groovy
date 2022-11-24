@@ -7,7 +7,7 @@ import es.ja.CadenaConfig
 static void execute(ct) {
      ct.stage(Constants.FASE_DESCARGA_FUENTES) {
           def cadenaConfig = CadenaConfig.getInstance()
-          def credentialsId = cadenaConfig.configuracionCadena.credencialesGIT
+          def credentialsId = cadenaConfig.configuracionPipeline.credencialesGIT
           def url = ''
           def rama = ''
           ct.timeout(time: 5, unit: 'MINUTES') {

@@ -12,7 +12,8 @@ class CadenaConfig {
         tipoProducto: "maven",
         versionMaven: "",
         rutaPOM:"",
-        goals:""
+        goals:"",
+        credencialesGIT:"Gitlab"
     ]
     Map configuracionGit = [:]
     Map runningConfig = [
