@@ -12,7 +12,7 @@ class CadenaConfig {
         rutaPOM:"./pom.xml",
         goals:"clean package",
         credencialesGIT:"Gitlab",
-        sonarScaner="SonarScanner",
+        sonarScanerTool="SonarScanner",
         sonarToken="SonarToken",
         sonarInstancia="SonarLocal"
     ]
