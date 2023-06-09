@@ -10,7 +10,7 @@ class CadenaConfig {
         tipoProducto: "maven",
         versionMaven: "Maven-3.8.6",
         rutaPOM:"./pom.xml",
-        goals:"clean package",
+        goals:"clean package -DskipTests",
         credencialesGIT: "Gitlab",
         sonarScanerTool: "SonarScanner",
         sonarToken: "SonarToken",

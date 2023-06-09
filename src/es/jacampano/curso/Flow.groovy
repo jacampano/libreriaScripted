@@ -22,8 +22,11 @@ class Flow {
             def isStartedByUser =  stages.inicializacion()
 
             if (isStartedByUser) {
-                steps.currentBuild.result = 'ABORTED'
-                steps.error('[Error] Ejecucion manual iniciada desde jenkins. No se permite.')
+                steps.echo("--- Ejecución manual del flujo ---")
+                normalFlow()
+                // Una ejecución manual se podría abortar de la siguiente manera:
+                //steps.currentBuild.result = 'ABORTED'
+                //steps.error('[Error] Ejecucion manual iniciada desde jenkins. No se permite.')
 
             } else {
                 normalFlow()
