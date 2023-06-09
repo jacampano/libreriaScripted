@@ -4,6 +4,7 @@ import es.jacampano.curso.Utils
 import es.jacampano.curso.Constants
 
 static void execute(ct) {
+    ct.println("LLEGA A ANALISISOWASP")
     def cadenaConfig = CadenaConfig.getInstance()
     def data = [:]
     def filename = ct.env.WORKSPACE+"/dependency-check-report.json"
