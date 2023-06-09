@@ -13,8 +13,8 @@ static void execute(ct) {
           ct.timeout(time: 5, unit: 'MINUTES') {
 
                ct.echo("--- EJECUCION WEBHOOK ---")
-               url = ct.env.gitlabSourceRepoHttpUrl
-               rama = ct.env.gitlabBranch
+               //url = ct.env.gitlabSourceRepoHttpUrl
+               //rama = ct.env.gitlabBranch
                ct.echo("--- Obtener Codigo Fuente desde rama:${rama}--")
                ct.checkout([$class: 'GitSCM',
                          branches: [[name: rama]],
