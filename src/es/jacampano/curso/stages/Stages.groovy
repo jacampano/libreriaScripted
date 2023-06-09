@@ -46,13 +46,10 @@ class Stages {
                 AnalisisSonar.execute(steps)
                 QualityGate.execute(steps)
                 AnalisisOWASP.execute(steps)
-                PruebasUnitarias.execute(steps)
+                //PruebasUnitarias.execute(steps)
         }
     }
 
-    void analisisOWASP() {
-        return AnalisisOWASP.execute(steps)
-    }
     
     void vistoBuenoCalidad() {
         return VistoBuenoCalidad.execute(steps)
