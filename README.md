@@ -9,7 +9,7 @@ Una vez se ha realizado el registro en la configuración de Jenkins, para hacer 
 Por ejemplo, si a nuestra libreria la hemos llamado libreriaScripted, en nuestro pipeline deberemos referenciarla:
 
 ```
-@@Library('libreriaScripted')
+@Library('libreriaScripted')
 ```
 
 
