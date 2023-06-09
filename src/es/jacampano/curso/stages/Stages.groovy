@@ -49,6 +49,10 @@ class Stages {
                 PruebasUnitarias.execute(steps)
         }
     }
+
+    void analisisOWASP() {
+        return AnalisisOWASP.execute(steps)
+    }
     
     void vistoBuenoCalidad() {
         return VistoBuenoCalidad.execute(steps)
