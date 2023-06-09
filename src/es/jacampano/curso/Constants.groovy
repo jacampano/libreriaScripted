@@ -2,11 +2,9 @@ package es.jacampano.curso
 
 class Constants {
 
-    public static final String[] PLATAFORMAS_CONTENEDORES = ['Tanzu']
+    public static final String[] PLATAFORMAS_CONTENEDORES = ['Tanzu','OpenShift']
     public static final String[] SERVIDORES_APLICACION = ['tomcat7', 'tomcat8', 'tomcat9', 'jboss7']
     public static final String[] SERVIDORES_WSO2 = ['wso2ei', 'wso2am', 'wso2is']
-    public static final String URL_SERVIDOR_CONFIGURACION = 'https://consul.chie.junta-andalucia.es/v1/kv'
-    public static final String URL_GIT_API = 'https://gitlabexp.chap.junta-andalucia.es/api/v4'
     public static final String EJECUCION_MANUAL = 'Ejecución Manual'
     
     //Nombre fases
@@ -57,9 +55,9 @@ class Constants {
 
     //Repositorios
 
-    public static final String REPOSITORIO_DESCARGA_RELEASES = 'ja-internal'
-    public static final String REPOSITORIO_DESCARGA_SNAPSHOTS = 'ja-internal'
-    public static final String REPOSITORIO_SUBIDA_RELEASES = 'ja-artifacts-deploy'
-    public static final String REPOSITORIO_SUBIDA_SNAPSHOTS  = 'ja-ci-deploy-snapshots'
+    public static final String REPOSITORIO_DESCARGA_RELEASES = 'curso'
+    public static final String REPOSITORIO_DESCARGA_SNAPSHOTS = 'curso-snapshots'
+    public static final String REPOSITORIO_SUBIDA_RELEASES = 'curso'
+    public static final String REPOSITORIO_SUBIDA_SNAPSHOTS  = 'curso-snapshots'
     
 }

@@ -11,7 +11,7 @@ class CadenaConfig {
         versionMaven: "Maven-3.8.6",
         rutaPOM:"./pom.xml",
         goals:"clean package -DskipTests",
-        credencialesGIT: "Gitlab",
+        credencialesGIT: "userGitH",
         sonarScanerTool: "SonarScanner",
         sonarToken: "SonarToken",
         sonarInstancia:"SonarLocal",
