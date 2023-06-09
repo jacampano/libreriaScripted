@@ -8,8 +8,8 @@ static void execute(ct) {
      ct.stage(Constants.FASE_DESCARGA_FUENTES) {
           def cadenaConfig = CadenaConfig.getInstance()
           def credentialsId = cadenaConfig.configuracionPipeline.credencialesGIT
-          def url = ''
-          def rama = ''
+          def url = 'https://github.com/jacampano/pruebasWebApp.git'
+          def rama = 'main'
           ct.timeout(time: 5, unit: 'MINUTES') {
 
                ct.echo("--- EJECUCION WEBHOOK ---")
@@ -22,7 +22,6 @@ static void execute(ct) {
                          extensions: [], gitTool: 'git', submoduleCfg: [],
                          userRemoteConfigs: [[credentialsId: credentialsId, url: url]]])
                def workspace = "${ct.env.WORKSPACE}"
-               //ct.DescargarRepositorio(rama,url,credentialsId,workspace,ct)
           }
      }
 }
