@@ -1,4 +1,4 @@
-import es.curso.CadenaConfig
+import es.jacampano.curso.CadenaConfig
 
 def call(Closure body) {
     withJobJava {
