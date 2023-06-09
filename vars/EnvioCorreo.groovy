@@ -1,5 +1,5 @@
-import es.curso.CadenaConfig
-import es.curso.Constants
+import es.jacampano.curso.CadenaConfig
+import es.jacampano.curso.Constants
 
 @NonCPS
 def call(step){

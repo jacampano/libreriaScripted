@@ -1,4 +1,4 @@
-package es.curso.mails
+package es.jacampano.curso.mails
 def call (producto, notificarUsuario) {
     echo 'Envio correo de log'
     emailext attachLog: true, attachmentsPattern: 'generatedFile.log',

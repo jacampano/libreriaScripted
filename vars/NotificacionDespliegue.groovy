@@ -1,4 +1,4 @@
-import es.curso.Constants
+import es.jacampano.curso.Constants
 def call (notificarTodo, estadoDespliegue, notificarUsuario, producto) {
     def entorno = null
 

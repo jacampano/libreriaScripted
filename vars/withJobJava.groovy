@@ -1,4 +1,4 @@
-import es.curso.CadenaConfig
+import es.jacampano.curso.CadenaConfig
 
 def call(Closure body) {
     withEnv(["JAVA_HOME=${ tool CadenaConfig.getInstance().configuracionPipeline.java}"]) {
