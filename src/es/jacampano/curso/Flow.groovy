@@ -51,7 +51,6 @@ class Flow {
         //stages.desplegarArtifactory()
       
         stages.pruebasDeComponentes()
-        stages.analisisOWASP()
         stages.vistoBuenoCalidad()
         stages.finalizacion()
     
