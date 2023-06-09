@@ -1,4 +1,4 @@
-package es.ja.functionaltesting
+package es.jacampano.curso.functionaltesting
 
 static void orquestarPruebas(ct, frameworkPruebasAutomatizadas) {
     ct.echo("Framework Pruebas automatizadas: ${frameworkPruebasAutomatizadas}")

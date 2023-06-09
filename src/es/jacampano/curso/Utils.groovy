@@ -1,4 +1,4 @@
-package es.ja
+package es.jacampano.curso
 
 import groovy.json.JsonSlurperClassic
 import groovy.json.JsonSlurper

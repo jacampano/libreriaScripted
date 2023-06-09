@@ -1,9 +1,9 @@
 /* groovylint-disable NoWildcardImports */
-package es.ja.stages
+package es.jacampano.curso.stages
 
-import es.ja.Utils
-import es.ja.Constants
-import es.ja.CadenaConfig
+import es.jacampano.curso.Utils
+import es.jacampano.curso.Constants
+import es.jacampano.curso.CadenaConfig
 
 static boolean execute(steps) {
      def cadenaConfig = CadenaConfig.getInstance()

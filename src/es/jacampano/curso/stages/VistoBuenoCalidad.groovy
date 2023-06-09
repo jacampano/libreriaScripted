@@ -1,7 +1,7 @@
-package es.ja.stages
+package es.jacampano.curso.stages
 
-import es.ja.CadenaConfig
-import es.ja.Constants
+import es.jacampano.curso.CadenaConfig
+import es.jacampano.curso.Constants
 
 static void execute(ct) {
     def runningConfig = CadenaConfig.getInstance().runningConfig

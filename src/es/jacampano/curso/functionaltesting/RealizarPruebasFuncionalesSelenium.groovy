@@ -1,5 +1,5 @@
-package es.ja.functionaltesting
-import es.ja.Constants
+package es.jacampano.curso.functionaltesting
+import es.jacampano.curso.Constants
 
 def call(ct, String options) {
     def entorno = 'DEV'

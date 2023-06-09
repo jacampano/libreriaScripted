@@ -1,4 +1,4 @@
-import es.ja.CadenaConfig
+import es.curso.CadenaConfig
 
 @NonCPS
 def call () {

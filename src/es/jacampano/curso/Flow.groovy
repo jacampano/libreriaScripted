@@ -1,8 +1,8 @@
-package es.ja
+package es.jacampano.curso
 
-import es.ja.Constants
-import es.ja.CadenaConfig
-import es.ja.stages.Stages
+import es.jacampano.curso.Constants
+import es.jacampano.curso.CadenaConfig
+import es.jacampano.curso.stages.Stages
 
 class Flow {
 

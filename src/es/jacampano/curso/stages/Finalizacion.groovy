@@ -1,4 +1,4 @@
-package es.ja.stages
+package es.jacampano.curso.stages
 
 static void execute(ct) {
     ct.stage('Finalización') {

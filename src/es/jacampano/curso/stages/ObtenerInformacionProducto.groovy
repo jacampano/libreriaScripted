@@ -1,6 +1,6 @@
-package es.ja.stages
+package es.jacampano.curso.stages
 
-import es.ja.CadenaConfig
+import es.jacampano.curso.CadenaConfig
 
 static String execute(ct) {
     ct.stage('Obtener información producto') {

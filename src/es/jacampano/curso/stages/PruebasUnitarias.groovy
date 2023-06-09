@@ -1,6 +1,6 @@
-package es.ja.stages
+package es.jacampano.curso.stages
 
-import es.ja.CadenaConfig
+import es.jacampano.curso.CadenaConfig
 
 static void execute(ct) {
     def cadenaConfig = CadenaConfig.getInstance()

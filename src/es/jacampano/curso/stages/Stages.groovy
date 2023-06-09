@@ -1,7 +1,7 @@
-package es.ja.stages
+package es.jacampano.curso.stages
 
-import es.ja.Constants
-import es.ja.CadenaConfig
+import es.jacampano.curso.Constants
+import es.jacampano.curso.CadenaConfig
 
 class Stages {
 
